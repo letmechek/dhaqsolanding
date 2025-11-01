@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #1a2547;
+  --color-navy-light: #2a3557;
+  --color-turquoise: #71e5df;
+  --color-turquoise-light: #8eeee6;
+  --color-background: #ffffff;
+  --color-muted: #f4f6ff;
+  --color-surface: #ffffff;
+  --color-foreground: #1a2547;
+  --color-secondary-text: #4d5c82;
+  --color-border: rgba(26, 37, 71, 0.1);
+  --font-sans: var(--font-sans-base);
+  --font-heading: var(--font-heading-display);
+}
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-turquoise);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--color-turquoise);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 37, 71, 0.1);
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading), var(--font-sans), sans-serif;
+  }
+}

@@ -122,11 +122,11 @@ export const Hero = () => {
           transition={{ delay: 0.35, duration: 0.7 }}
         >
           <div className="relative w-full max-w-xl">
-            <div className="absolute -left-10 top-10 hidden h-32 w-32 rounded-3xl border border-turquoise/30 lg:block" />
-            <div className="absolute -right-4 bottom-10 hidden h-24 w-24 rounded-full border border-white/20 lg:block" />
-            <div className="relative rounded-[32px] bg-white/5 p-6 shadow-2xl backdrop-blur-lg">
+            <div className="absolute -left-10 top-10 hidden h-32 w-32 rounded-3xl  lg:block" />
+            <div className="absolute -right-4 bottom-10 hidden h-24 w-24 rounded-full  lg:block" />
+            <div className="relative rounded-[32px] p-6  ">
               <Image
-                src="/images/hero-graphic.svg"
+                src="/images/hero-graphic.png"
                 alt="Illustration of DhaqsoPay mobile experience"
                 width={560}
                 height={540}

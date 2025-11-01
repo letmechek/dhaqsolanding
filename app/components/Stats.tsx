@@ -21,7 +21,7 @@ const iconMap = {
 
 const useCountUp = (target: number, inView: boolean) => {
   const [displayValue, setDisplayValue] = useState(0);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!inView) {
@@ -50,6 +50,7 @@ const useCountUp = (target: number, inView: boolean) => {
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
+        animationRef.current = null;
       }
     };
   }, [target, inView]);
